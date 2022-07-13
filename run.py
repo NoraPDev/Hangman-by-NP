@@ -39,3 +39,13 @@ def play(chosen_word):
                     word = "".join(word_template_list)
                     if "_" not in word:
                         word_guessed = True
+
+    print(display_hangman(tries))
+    end_game(play_word)
+
+def initialise_game():
+    """
+    Sets up game
+    """
+    chosen_word = random.choice(words_list).upper()
+    play(chosen_word)
