@@ -5,6 +5,7 @@ words_list = []
 for line in open('words.txt', 'r').readlines():
     words_list.append(line.strip())
 
+
 def play(play_word, lives):
     """
     Plays the game
@@ -25,33 +26,33 @@ def play(play_word, lives):
                 print(f"{guess} is not in the word.")
                 tries -= 1
                 guessed_letters.append(guess)
+                display_hangman(tries)
             elif guess in guessed_letters:
                 print("You already guessed this letter.")
             else:
                 print(f"Well done, {guess} is in the word! Easy-peasy!")
                 guessed_letters.append(guess)
+                display_hangman(tries)
 
                 word_template_list = list(word)
-                indices = [i for i, letter in enumerate(play_word)
-                            if letter == guess]
+                indices = [i for i, letter in enumerate(play_word) if letter == guess]
                 for index in indices:
                     word_template_list[index] = guess
                     word = "".join(word_template_list)
                     if "_" not in word:
                         word_guessed = True
                         correct_word()
-
-
     print(display_hangman(tries))
     incorrect_word()
     end_game(play_word)
+
 
 def initialise_game():
     """
     Sets up game, select difficulty level
     """
     play_word = random.choice(words_list).upper()
-    play(play_word, 6)
+    
 
     while True:
         print('Choose [E]asy, [M]edium or [H]ard')
@@ -65,6 +66,7 @@ def initialise_game():
             play(play_word, 2)
         else:
             print('Please go back and choose a level!')
+    
 
 def end_game(word):
     """
@@ -83,6 +85,7 @@ def end_game(word):
             print('See you later, alligator!')
             break
 
+
 def hangman_initial():
     print(
         """
@@ -94,6 +97,7 @@ def hangman_initial():
                             |___/
         """
     )
+
 
 def display_hangman(lives):
     """
@@ -203,6 +207,7 @@ def display_hangman(lives):
     ]
     return lives_left[lives]
 
+
 def correct_word():
     """
     When player guessed the word correctly, this will go on display
@@ -241,7 +246,7 @@ def incorrect_word():
         )
 
 
-
-
 def main():
     initialise_game()
+
+main()
