@@ -15,6 +15,7 @@ def play(play_word, lives):
     guessed_letters = []
     tries = lives
     print("Let's play Hangman!")
+    hangman_initial()
     print(word)
     print("\n")
     while not word_guessed and tries > 0:
