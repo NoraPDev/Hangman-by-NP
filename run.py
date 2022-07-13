@@ -5,7 +5,7 @@ words_list = []
 for line in open('words.txt', 'r').readlines():
     words_list.append(line.strip())
 
-def play(chosen_word):
+def play(chosen_word, lives):
     """
     Plays the game
     """
@@ -14,7 +14,7 @@ def play(chosen_word):
     word_guessed = False
     guessed_letters = []
     guessed_words = []
-    tries = 6
+    tries = lives
     print("Let's play Hangman!")
     print(word)
     print("\n")
@@ -48,7 +48,20 @@ def initialise_game():
     Sets up game
     """
     chosen_word = random.choice(words_list).upper()
-    play(chosen_word)
+    play(chosen_word, 6)
+
+    while True:
+        print('Choose [E]asy, [M]edium or [H]ard')
+        difficulty = input('Please choose!')
+        #Input to select difficulty#
+        if difficulty.lower() == 'e':
+            play(chosen_word, 6)
+        elif difficulty.lower() == 'm':
+            play(chosen_word, 4)
+        elif difficulty.lower() == 'h':
+            play(chosen_word, 2)
+        else:
+            print('Please go back and choose a level!')
 
 def end_game(word):
     """
@@ -56,7 +69,7 @@ def end_game(word):
     """
     print("Your guess was wrong!")
     print(f"The word was {word}")
-​
+
     while True:
         response = input("Do you want to play again [y]es or [n]o")
         if response.lower() == 'y':
@@ -174,3 +187,6 @@ def display_hangman(lives):
         """
     ]
     return lives_left[lives]
+
+
+initialise_game()
