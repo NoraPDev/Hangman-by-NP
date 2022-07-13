@@ -50,7 +50,7 @@ def initialise_game():
     Sets up game, select difficulty level
     """
     play_word = random.choice(words_list).upper()
-    play(play_word(, 6))
+    play(play_word, 6)
 
     while True:
         print('Choose [E]asy, [M]edium or [H]ard')
@@ -82,7 +82,19 @@ def end_game(word):
             print('See you later, alligator!')
             break
 
-def hangman_lives(lives):
+def hangman_initial():
+    print(
+        """
+         _   _                                         _  ___  _
+        | | | | __ _ _ __   __ _ _ __ ___   __ _ _ __ / |/ _ \\/ |
+        | |_| |/ _` | '_ \\ / _` | '_ ` _ \\ / _` | '_ \\| | | | | |
+        |  _  | (_| | | | | (_| | | | | | | (_| | | | | | |_| | |
+        |_| |_|\\__,_|_| |_|\\__, |_| |_| |_|\\__,_|_| |_|_|\\___/|_|
+                            |___/
+        """
+    )
+
+def display_hangman(lives):
     """
     Displays hangman graphic based on lives left
     """
@@ -230,4 +242,5 @@ def incorrect_word():
 
 
 
-initialise_game()
+def main():
+    initialise_game()
