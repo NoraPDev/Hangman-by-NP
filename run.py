@@ -1,7 +1,7 @@
 import random
 
 words_list = []
-
+play_word = random.choice(words_list).upper()
 for line in open('words.txt', 'r').readlines():
     words_list.append(line.strip())
 
@@ -39,15 +39,18 @@ def play(chosen_word, lives):
                     word = "".join(word_template_list)
                     if "_" not in word:
                         word_guessed = True
+                        correct_word()
+
 
     print(display_hangman(tries))
+    incorrect_word()
     end_game(play_word)
 
 def initialise_game():
     """
-    Sets up game
+    Sets up game, select difficulty level
     """
-    chosen_word = random.choice(words_list).upper()
+    play_word = random.choice(words_list).upper()
     play(chosen_word, 6)
 
     while True:
@@ -73,14 +76,14 @@ def end_game(word):
     while True:
         response = input("Do you want to play again [y]es or [n]o")
         if response.lower() == 'y':
-            print('you want to play again')
+            print('You are about to start a new game!')
             initialise_game()
             break
         elif response.lower() == 'n':
-            print('You dont wanna')
+            print('See you later, alligator!')
             break
 
-def display_hangman(lives):
+def hangman_lives(lives):
     """
     Displays hangman graphic based on lives left
     """
@@ -174,7 +177,7 @@ def display_hangman(lives):
         |
         ========
         """,
-​
+
         """
         |
         |
@@ -187,6 +190,45 @@ def display_hangman(lives):
         """
     ]
     return lives_left[lives]
+
+def correct_word():
+    """
+    When player guessed the word correctly, this will go on display
+    """
+    print(
+        text_colors.PINK + """
+        __   __
+        \\ \\ / /__  _   _
+         \\ V / _ \\| | | |
+          | | (_) | |_| |
+          |_|\\___/_\\__,_| _
+        __      _(_)_ __ | |
+        \\ \\ /\\ / / | '_ \\| |
+         \\ V  V /| | | | |_|
+          \\_/\\_/ |_|_| |_(_)
+        """ + text_colors.WHITE
+        )
+
+
+def incorrect_word():
+    """
+    Word guessed incorrectly, displays below
+    """
+    print(
+        text_colors.BLUE + """
+          ____
+         / ___| __ _ _ __ ___   ___
+        | |  _ / _` | '_ ` _ \\ / _ \\
+        | |_| | (_| | | | | | |  __/
+         \\____|\\__,_|_| |_| |_|\\___|
+         / _ \\__   _____ _ __| |
+        | | | \\ \\ / / _ \\ '__| |
+        | |_| |\\ V /  __/ |  |_|
+         \\___/  \\_/ \\___|_|  (_)
+        """ + text_colors.WHITE
+        )
+
+
 
 
 initialise_game()
