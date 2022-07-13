@@ -49,3 +49,21 @@ def initialise_game():
     """
     chosen_word = random.choice(words_list).upper()
     play(chosen_word)
+
+def end_game(word):
+    """
+    Ends game
+    """
+    print("Your guess was wrong!")
+    print(f"The word was {word}")
+​
+    while True:
+        response = input("Do you want to play again [y]es or [n]o")
+        if response.lower() == 'y':
+            print('you want to play again')
+            initialise_game()
+            break
+        elif response.lower() == 'n':
+            print('You dont wanna')
+            break
+        
