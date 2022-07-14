@@ -61,8 +61,8 @@ def play(play_word, lives):
     else:
         display_hangman(0)
         incorrect_word()
-        print("your guess was wrong!")
-        print(f"the word was {play_word}")
+        print("Your guess was wrong!")
+        print(f"The word was {play_word}")
         end_game(play_word)
 
 
