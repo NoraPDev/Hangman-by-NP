@@ -60,7 +60,7 @@ Before 6/4/2 wrong guesses, if every field is filled with its corresponding lett
 Tech used: Python 
 <img src="assets/images/python_logo.png" alt="drawing" height ="50" width="50"/>
 <br>
-This Hangman game has been deployed on a Code Institute mock terminal on Heroku.ß
+This Hangman game has been deployed on a Code Institute mock terminal on Heroku.
 
 ## **If I had unlimited time...**
 
