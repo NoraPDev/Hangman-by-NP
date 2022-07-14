@@ -1,5 +1,7 @@
 # Hangman
 
+![Responsiveness](assets/images/am_i_responsive.png)
+
 This is a Python remake of Hangman. 
 The purpose of the game is just to fill some time when you have 2 minutes to play. 
 ![Initial Home Screen](assets/images/initial_screen.png)
