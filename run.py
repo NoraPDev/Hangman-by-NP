@@ -52,12 +52,18 @@ def play(play_word, lives):
                     word = "".join(word_template_list)
                     if "_" not in word:
                         word_guessed = True
-                        correct_word()
         else:
             print("Please only enter a single letter!")
-    display_hangman(0)
-    incorrect_word()
-    end_game(play_word)
+    if word_guessed:
+        correct_word()
+        print("You WON! Well Done! :)")
+        end_game(play_word)
+    else:
+        display_hangman(0)
+        incorrect_word()
+        print("your guess was wrong!")
+        print(f"the word was {play_word}")
+        end_game(play_word)
 
 
 def initialise_game():
@@ -85,9 +91,6 @@ def end_game(word):
     """
     Ends game
     """
-    print("Your guess was wrong!")
-    print(f"The word was {word}")
-
     while True:
         response = input("Do you want to play again [y]es or [n]o")
         if response.lower() == 'y':
@@ -96,12 +99,12 @@ def end_game(word):
             break
         elif response.lower() == 'n':
             print('See you later, alligator!')
-            sys.exit()   
+            sys.exit()
 
 
 def hangman_initial():
     """
-    Graphic Hangman title.
+    Graphic Hangman logo.
     """
     print(
         """
