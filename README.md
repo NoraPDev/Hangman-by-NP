@@ -13,8 +13,8 @@ The purpose of the game is just to fill some time when you have 2 minutes to pla
 2. [**User Goals**](#user-goals)
 3. [**Rules**](#rules)
 4. [**Files**](#files)
-5. [**How Is It Made?**](#technology)
-6. [**If I had unlimited time...**](#to-be-added)
+5. [**Technology**](#technology)
+6. [**Features To Be Added**](#features-to-be-added)
 7. [**Features/Testing**](#features/testing)
 8. [**Bugs**](#bugs)
 8. [**Credits**](#credits)
@@ -56,13 +56,13 @@ Before 6/4/2 wrong guesses, if every field is filled with its corresponding lett
 
 * List of random words to be used in the game.
 
-## **How Is It Made?**
+## **Technology**
 Tech used: Python 
 <img src="assets/images/python_logo.png" alt="drawing" height ="50" width="50"/>
 <br>
 This Hangman game has been deployed on a Code Institute mock terminal on Heroku.
 
-## **If I had unlimited time...**
+## **Features To Be Added**
 
 If I had more time to improve my program:
 
