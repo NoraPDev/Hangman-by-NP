@@ -105,7 +105,7 @@ Tested each section of the game by features
 
 
 3. Once there was a guess of word, the program will decide if it was the correct word or not
-*   This stage works as is should as well, I have tested both outcomes
+*   This stage works as it should as well, I have tested both outcomes
 ![Correct word](assets/images/winner.png)
 ![Wrong word](assets/images/loser.png)
 
