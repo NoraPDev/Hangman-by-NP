@@ -1,4 +1,6 @@
 import random
+import sys
+from os import system, name
 
 
 class text_colors:
@@ -66,8 +68,8 @@ def initialise_game():
     hangman_initial()
 
     while True:
-        print('Choose [E]asy, [M]edium or [H]ard')
-        difficulty = input('Please choose!')
+        print('Welcome to Hangman By Nora!\nYou can choose difficulty level [E]asy, [M]edium or [H]ard')
+        difficulty = input('Please choose now: ')
         # Input to select difficulty#
         if difficulty.lower() == 'e':
             play(play_word, 6)
@@ -94,18 +96,20 @@ def end_game(word):
             break
         elif response.lower() == 'n':
             print('See you later, alligator!')
-            break
+            sys.exit()   
 
 
 def hangman_initial():
+    """
+    Graphic Hangman title.
+    """
     print(
         """
-         _   _                                         _  ___  _
-        | | | | __ _ _ __   __ _ _ __ ___   __ _ _ __ / |/ _ \\/ |
-        | |_| |/ _` | '_ \\ / _` | '_ ` _ \\ / _` | '_ \\| | | | | |
-        |  _  | (_| | | | | (_| | | | | | | (_| | | | | | |_| | |
-        |_| |_|\\__,_|_| |_|\\__, |_| |_| |_|\\__,_|_| |_|_|\\___/|_|
-                            |___/
+        ░░   ░░  ░░░░░  ░░░    ░░  ░░░░░░  ░░░    ░░░  ░░░░░  ░░░    ░░
+        ▒▒   ▒▒ ▒▒   ▒▒ ▒▒▒▒   ▒▒ ▒▒       ▒▒▒▒  ▒▒▒▒ ▒▒   ▒▒ ▒▒▒▒   ▒▒
+        ▒▒▒▒▒▒▒ ▒▒▒▒▒▒▒ ▒▒ ▒▒  ▒▒ ▒▒   ▒▒▒ ▒▒ ▒▒▒▒ ▒▒ ▒▒▒▒▒▒▒ ▒▒ ▒▒  ▒▒
+        ▓▓   ▓▓ ▓▓   ▓▓ ▓▓  ▓▓ ▓▓ ▓▓    ▓▓ ▓▓  ▓▓  ▓▓ ▓▓   ▓▓ ▓▓  ▓▓ ▓▓
+        ██   ██ ██   ██ ██   ████  ██████  ██      ██ ██   ██ ██   ████
         """
     )
 
