@@ -120,5 +120,13 @@ I have also tested the code with [PEP8](http://pep8online.com/), the outcome is 
 
 ## **Credits**
 
-* Random list generator - https://randomwordgenerator.com
+* [Random list generator](https://randomwordgenerator.com) - to generate words.txt, containing 100 random words
+* [Code Institute](https://codeinstitute.net/) for the mock terminal for the deploy to a live site.
+* [YouTube Tutorial - Python Hangman](https://www.youtube.com/watch?v=m4nEnsavl6w) - to see how to start off
+* [ASCII Colour Codes](https://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html) - giving me the colour codes that I can use in Python to make text colourful
+* [Saltta GitHub](https://github.com/saltta/hangman-game) - for the hangman logo
+* [Gibbo GitHub](https://github.com/gibbo101/hangman) - for the hangman graphic itself
 * Huge thanks to my mentor, Richard Wells for guiding and helping me through this game build
+
+
+ 
