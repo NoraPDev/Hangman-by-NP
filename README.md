@@ -4,6 +4,7 @@
 
 This is a Python remake of Hangman. 
 The purpose of the game is just to fill some time when you have 2 minutes to play. 
+
 ![Initial Home Screen](assets/images/initial_screen.png)
 
 [Hangman-by-NP](https://hangman-by-np.herokuapp.com/) - You can start playing here. 
@@ -29,10 +30,10 @@ I was planning for a game that is
  * possible to start over and over again
  * good to look at, even if it's in a terminal window
 
- <img src="assets/images/userstory1.png" alt="drawing" height ="160" width="140"/> 
- <img src="assets/images/userstory2.png" alt="drawing" height ="160" width="140"/>
- <img src="assets/images/userstory3.png" alt="drawing" height ="160" width="140"/>
- <img src="assets/images/userstory4.png" alt="drawing" height ="160" width="140"/>
+ <img src="assets/images/userstory1.png" alt="drawing" height ="180" width="160"/> 
+ <img src="assets/images/userstory2.png" alt="drawing" height ="180" width="160"/>
+ <img src="assets/images/userstory3.png" alt="drawing" height ="180" width="160"/>
+ <img src="assets/images/userstory4.png" alt="drawing" height ="180" width="160"/>
 
 
 ## **Rules**
