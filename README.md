@@ -30,10 +30,10 @@ I was planning for a game that is
  * possible to start over and over again
  * good to look at, even if it's in a terminal window
 
- <img src="assets/images/userstory1.png" alt="drawing" height ="200" width="180"/> 
- <img src="assets/images/userstory2.png" alt="drawing" height ="200" width="180"/>
- <img src="assets/images/userstory3.png" alt="drawing" height ="200" width="180"/>
- <img src="assets/images/userstory4.png" alt="drawing" height ="200" width="180"/>
+ <img src="assets/images/userstory1.png" alt="drawing" height ="240" width="220"/> 
+ <img src="assets/images/userstory2.png" alt="drawing" height ="240" width="220"/>
+ <img src="assets/images/userstory3.png" alt="drawing" height ="240" width="220"/>
+ <img src="assets/images/userstory4.png" alt="drawing" height ="240" width="220"/>
 
 
 ## **Rules**
