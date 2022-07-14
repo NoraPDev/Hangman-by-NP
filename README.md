@@ -15,8 +15,8 @@ The purpose of the game is just to fill some time when you have 2 minutes to pla
 3. [**Rules**](#rules)
 4. [**Files**](#files)
 5. [**Technology**](#technology)
-6. [**Features To Be Added**](#features-to-be-added)
-7. [**Features/Testing**](#features/testing)
+6. [**Features/Testing**](#features/testing)
+7. [**Features To Be Added**](#features-to-be-added)
 8. [**Bugs**](#bugs)
 8. [**Credits**](#credits)
 
@@ -63,13 +63,6 @@ Tech used: Python
 <br>
 This Hangman game has been deployed on a Code Institute mock terminal on Heroku.
 
-## **Features To Be Added**
-
-If I had more time to improve my program:
-
-* I would enhance the user experience with some styling in HTML/CSS
-
-* I would create a login page, so the players can have their own profile and record their wins/losses, possibly have the option to play against each other online
 
 ## **Features/Testing**
 Tested each section of the game by features
@@ -88,6 +81,7 @@ Tested each section of the game by features
 
 1. You can chose difficulty level
 *   I have tried inputting a different letter/number, and it is not letting me through, until there is a valid letter, so it is passed the test
+
 ![Initial Home Screen](assets/images/initial_screen.png)
 ![Beginning](assets/images/begin.png)
 
@@ -100,6 +94,7 @@ Tested each section of the game by features
 ![Incorrect guess](assets/images/single_letter.png)
 
 *   I have also tried guessing the same letter twice
+
 ![Correct letter](assets/images/already_guessed.png)
 
 *   I have tried typing a letter, the game is happening, so this stage is working
@@ -107,6 +102,7 @@ Tested each section of the game by features
 
 3. Once there was a guess of word, the program will decide if it was the correct word or not
 *   This stage works as it should as well, I have tested both outcomes
+
 ![Correct word](assets/images/winner.png)
 ![Wrong word](assets/images/loser.png)
 
@@ -114,6 +110,15 @@ Tested each section of the game by features
 I have also tested the code with [PEP8](http://pep8online.com/), the outcome is as per below
 
 ![PEP8](assets/images/pep8.png)
+
+
+## **Features To Be Added**
+
+If I had more time to improve my program:
+
+* I would enhance the user experience with some styling in HTML/CSS
+
+* I would create a login page, so the players can have their own profile and record their wins/losses, possibly have the option to play against each other online
 
 ## **Bugs**
 1. 
