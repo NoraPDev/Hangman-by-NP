@@ -1,4 +1,27 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Hangman
+
+This is a Python remake of Hangman.
+
+## The Game
+The player's goal in the traditional children's game of Hangman is to find a hidden word, for which only the initial letter count is given. Each round, the player guesses an alphabetical letter. If the letter is present in the word, all occurrences are revealed; if not, one of the hangman's body parts is drawn in on a gibbet. If the word is totally disclosed by accurate guesses, the game is won; otherwise, it is lost. If the hangman's body is completely revealed, the game is lost. It is common to keep track of all letters that have been correctly predicted in order to aid the player.
+
+
+
+## Files
+
+**run.py**
+
+* Allows user to choose a difficulty
+* Runs gameplay
+* Displays results at the end of the game
+* Prompts player to replay the game
+
+**words.txt**
+
+* List of random words to be used in the game.
+
+
+.![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome NoraPDev,
 
