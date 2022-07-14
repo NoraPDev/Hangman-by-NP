@@ -1,5 +1,14 @@
 import random
 
+
+class text_colors:
+    """
+    Defines terminal text color
+    """
+    MAGENTA = '\u001b[35m'
+    BLUE = '\u001b[34m'
+    WHITE = '\u001b[37m'
+
 words_list = []
 
 for line in open('words.txt', 'r').readlines():
@@ -10,16 +19,15 @@ def play(play_word, lives):
     """
     Plays the game
     """
-    print(play_word)
     word = "_" * len(play_word)
     word_guessed = False
     guessed_letters = []
     tries = lives
     print("Let's play Hangman!")
-    hangman_initial()
-    print(word)
     print("\n")
     while not word_guessed and tries > 0:
+        print(guessed_letters)
+        print(word)
         guess = input("Please guess a letter or word: ").upper()
         if len(guess) == 1 and guess.isalpha():
             if guess not in play_word:
@@ -35,14 +43,17 @@ def play(play_word, lives):
                 display_hangman(tries)
 
                 word_template_list = list(word)
-                indices = [i for i, letter in enumerate(play_word) if letter == guess]
+                indices = [
+                    i for i, letter in enumerate(play_word) if letter == guess]
                 for index in indices:
                     word_template_list[index] = guess
                     word = "".join(word_template_list)
                     if "_" not in word:
                         word_guessed = True
                         correct_word()
-    print(display_hangman(tries))
+        else:
+            print("Please only enter a single letter!")
+    display_hangman(0)
     incorrect_word()
     end_game(play_word)
 
@@ -52,12 +63,12 @@ def initialise_game():
     Sets up game, select difficulty level
     """
     play_word = random.choice(words_list).upper()
-    
+    hangman_initial()
 
     while True:
         print('Choose [E]asy, [M]edium or [H]ard')
         difficulty = input('Please choose!')
-        #Input to select difficulty#
+        # Input to select difficulty#
         if difficulty.lower() == 'e':
             play(play_word, 6)
         elif difficulty.lower() == 'm':
@@ -66,7 +77,7 @@ def initialise_game():
             play(play_word, 2)
         else:
             print('Please go back and choose a level!')
-    
+
 
 def end_game(word):
     """
@@ -205,7 +216,7 @@ def display_hangman(lives):
         """
         """
     ]
-    return lives_left[lives]
+    print(lives_left[lives])
 
 
 def correct_word():
@@ -213,7 +224,7 @@ def correct_word():
     When player guessed the word correctly, this will go on display
     """
     print(
-        text_colors.PINK + """
+        text_colors.MAGENTA + """
         __   __
         \\ \\ / /__  _   _
          \\ V / _ \\| | | |
