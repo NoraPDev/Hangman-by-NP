@@ -18,7 +18,8 @@ The purpose of the game is just to fill some time when you have 2 minutes to pla
 6. [**Features and Testing**](#features-and-testing)
 7. [**Features To Be Added**](#features-to-be-added)
 8. [**Bugs**](#bugs)
-8. [**Credits**](#credits)
+9. [**Deployment**](#deployment)
+10. [**Credits**](#credits)
 
 ## **The Game**
 The player's goal in the traditional children's game of Hangman is to find a hidden word, for which only the initial letter count is given. Each round, the player guesses an alphabetical letter. If the letter is present in the word, all occurrences are revealed; if not, one of the hangman's body parts is drawn in on a gibbet. If the word is totally disclosed by accurate guesses, the game is won; otherwise, it is lost. If the hangman's body is completely revealed, the game is lost. It is common to keep track of all letters that have been correctly predicted in order to aid the player.
@@ -127,6 +128,14 @@ If I had more time to improve my program:
 * Problem :lady_beetle: : When we didn't want to play anymore, the game ended with the right text, however it restarted itself still 
 * Resolution :white_check_mark: : I had to introduce a sys import and added a sys.exit function
 
+## **Deployment**
+Deployment:
+1. Signed in to the heroku website to create a new app
+2.  Named it to "hangman-by-np" and in the settings I set the Config Var to PORT 8000
+3. Added two buildpacks to the app: Python and NodeJS
+4. Pressed the Deploy button and link the GitHub 
+5. Enabled Automatic Deploys so it can refresh itself automatically
+6. Clicked "Deploy Branch" for manual deployment
 
 ## **Credits**
 
